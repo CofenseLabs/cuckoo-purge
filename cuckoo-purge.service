@@ -1,0 +1,13 @@
+[Unit]
+Description=Cuckoo Sandbox Purge Service
+After=network.target
+ 
+[Service]
+ExecStart=/data/cuckoo/bin/python /data/cuckoo/.cuckoo/stuff/purge.py --cwd .cuckoo
+Restart=on-failure
+User=cuckoo
+Group=cuckoo
+WorkingDirectory=/data/cuckoo
+ 
+[Install]
+WantedBy=multi-user.target

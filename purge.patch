@@ -1,0 +1,16 @@
+--- /home/research/config.py	2019-07-08 10:36:25.226494209 -0400
++++ lib/python2.7/site-packages/cuckoo/common/config.py	2019-07-08 10:40:20.053545399 -0400
+@@ -266,6 +266,13 @@
+                 "guacd_host": String("localhost"),
+                 "guacd_port": Int(4822),
+             },
++            "purge": {
++                "threshold": Int(0),
++                "daemon": Boolean(False),
++                "archive": Boolean(False),
++                "binaries_folder": String("binaries"),
++                "reports_folder": String("reports"),
++            },
+         },
+         "virtualbox": {
+             "virtualbox": {
